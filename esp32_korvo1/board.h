@@ -135,9 +135,9 @@ audio_board_handle_t audio_board_get_handle(void);
 esp_err_t audio_board_deinit(audio_board_handle_t audio_board);
 
 // Function i2s config
-audio_element_handle_t configure_i2s_stream_writer_http();
-audio_element_handle_t configure_i2s_stream_writer_raw();
-audio_element_handle_t configure_resample_filter();
+esp_err_t configure_resample_filter(audio_element_handle_t *filter);
+esp_err_t configure_i2s_stream_writer_http(audio_element_handle_t *i2s_stream_writer);
+esp_err_t configure_i2s_stream_writer_raw(audio_element_handle_t *i2s_stream_writer);
 
 #ifdef __cplusplus
 }
