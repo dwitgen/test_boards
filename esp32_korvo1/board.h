@@ -32,6 +32,9 @@
 #include "display_service.h"
 #include "periph_sdcard.h"
 #include "periph_lcd.h"
+#include "audio_pipeline.h"
+#include "i2s_stream.h"
+#include "filter_resample.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -130,6 +133,11 @@ audio_board_handle_t audio_board_get_handle(void);
  *          others  fail
  */
 esp_err_t audio_board_deinit(audio_board_handle_t audio_board);
+
+// Function i2s config
+audio_element_handle_t configure_i2s_stream_writer_http();
+audio_element_handle_t configure_i2s_stream_writer_raw();
+audio_element_handle_t configure_resample_filter();
 
 #ifdef __cplusplus
 }
