@@ -33,7 +33,7 @@
 #include "periph_sdcard.h"
 #include "periph_lcd.h"
 #include "audio_pipeline.h"
-#include "i2s_stream.h"
+#include "<i2s_stream.h>"
 #include "filter_resample.h"
 
 #ifdef __cplusplus
