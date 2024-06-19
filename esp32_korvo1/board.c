@@ -271,7 +271,7 @@ esp_err_t configure_resample_filter(audio_element_handle_t *filter_raw_) {
         .stack_in_ext = true,
     };
 
-    *filter_raw = rsp_filter_init(&rsp_cfg);
+    *filter_raw_ = rsp_filter_init(&rsp_cfg);
     if (*filter_raw_ == NULL) {
         ESP_LOGE(TAG, "Failed to initialize raw resample filter");
         return ESP_FAIL;
