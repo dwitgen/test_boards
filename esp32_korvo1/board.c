@@ -217,7 +217,7 @@ esp_err_t configure_i2s_stream_writer_raw(audio_element_handle_t *i2s_stream_wri
 }
 
 // Function to configure resample filter
-esp_err_t configure_resample_filter(audio_element_handle_t *filter_http_) {
+esp_err_t configure_resample_filter_http(audio_element_handle_t *filter_http_) {
     rsp_filter_cfg_t rsp_cfg = {
         .src_rate = 44100,
         .src_ch = 2,
@@ -249,7 +249,7 @@ esp_err_t configure_resample_filter(audio_element_handle_t *filter_http_) {
     return ESP_OK;
 }
 // Function to configure resample filter
-esp_err_t configure_resample_filter(audio_element_handle_t *filter_raw_) {
+esp_err_t configure_resample_filter_raw(audio_element_handle_t *filter_raw_) {
     rsp_filter_cfg_t rsp_cfg = {
         .src_rate = 16000,
         .src_ch = 2,
