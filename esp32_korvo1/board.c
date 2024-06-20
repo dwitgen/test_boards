@@ -72,10 +72,11 @@ esp_err_t audio_board_key_init(esp_periph_set_handle_t set)
     adc_arr_t adc_btn_tag = ADC_DEFAULT_ARR();
     adc_btn_tag.total_steps = 6;
     adc_btn_tag.adc_ch = ADC1_CHANNEL_3;
-    int btn_array[7] = {190, 600, 1000, 1375, 1775, 2195, 3000};
+     int btn_array[7] = {380, 820, 1110, 1650, 1980, 2410, 3000}; //int btn_array[7] = {190, 600, 1000, 1375, 1775, 2195, 3000};
     adc_btn_tag.adc_level_step = btn_array;
     adc_btn_cfg.arr = &adc_btn_tag;
     adc_btn_cfg.arr_size = 1;
+    adc_btn_cfg.adc_atten = ADC_ATTEN_DB_11;
     esp_periph_handle_t adc_btn_handle = periph_adc_button_init(&adc_btn_cfg);
     AUDIO_NULL_CHECK(TAG, adc_btn_handle, return ESP_ERR_ADF_MEMORY_LACK);
     return esp_periph_start(set, adc_btn_handle);
