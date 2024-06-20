@@ -72,7 +72,7 @@ esp_err_t audio_board_key_init(esp_periph_set_handle_t set)
     adc_arr_t adc_btn_tag = ADC_DEFAULT_ARR();
     adc_btn_tag.total_steps = 6;
     adc_btn_tag.adc_ch = ADC1_CHANNEL_3;
-     int btn_array[7] = {380, 820, 1110, 1650, 1980, 2410, 3000}; //int btn_array[7] = {190, 600, 1000, 1375, 1775, 2195, 3000};
+    int btn_array[7] = {190, 600, 1000, 1375, 1775, 2195, 3000};
     adc_btn_tag.adc_level_step = btn_array;
     adc_btn_cfg.arr = &adc_btn_tag;
     adc_btn_cfg.arr_size = 1;
