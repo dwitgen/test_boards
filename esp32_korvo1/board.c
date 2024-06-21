@@ -69,6 +69,9 @@ audio_hal_handle_t audio_board_codec_init(void)
 esp_err_t audio_board_key_init(esp_periph_set_handle_t set)
 {
     periph_adc_button_cfg_t adc_btn_cfg = PERIPH_ADC_BUTTON_DEFAULT_CONFIG();
+    adc_btn_cfg.adc_width = ADC_WIDTH_BIT_12;
+    adc_btn_cfg.adc_atten = ADC_ATTEN_DB_12;
+    adc_btn_cfg.adc_ch = ADC1_CHANNEL_3;
     adc_arr_t adc_btn_tag = ADC_DEFAULT_ARR();
     adc_btn_tag.total_steps = 6;
     adc_btn_tag.adc_ch = ADC1_CHANNEL_3;
