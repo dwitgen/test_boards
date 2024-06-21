@@ -92,6 +92,14 @@ extern audio_hal_func_t AUDIO_CODEC_ES7210_DEFAULT_HANDLE;
         },                                              \
 };
 
+#define PERIPH_ADC_BUTTON_DEFAULT_CONFIG() {     \
+    .adc_width = ADC_WIDTH_BIT_12,               \
+    .adc_atten = ADC_ATTEN_DB_12,                \
+    .adc_ch = ADC1_CHANNEL_3,                    \
+    .arr = NULL,                                 \
+    .arr_size = 0,                               \
+}
+
 /**
  * @brief Define ADC Buttons
  */
