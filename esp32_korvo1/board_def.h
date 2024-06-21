@@ -128,7 +128,7 @@ extern audio_hal_func_t AUDIO_CODEC_ES7210_DEFAULT_HANDLE;
 #define INPUT_KEY_DEFAULT_INFO() {                      \
      {                                                  \
         .type = PERIPH_ID_ADC_BTN,                      \
-        .user_id = INPUT_KEY_USER_ID_UNKOWN,            \
+        .user_id = INPUT_KEY_USER_ID_UNKNOWN,           \
         .act_id = 0,                                    \
      },                                                 \
      {                                                  \
