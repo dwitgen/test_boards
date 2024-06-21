@@ -126,15 +126,16 @@ extern audio_hal_func_t AUDIO_CODEC_ES7210_DEFAULT_HANDLE;
 #define BUTTON_REC_ID               5
 
 #define INPUT_KEY_DEFAULT_INFO() {                      \
-     {                                                  \
+
+   {                                                    \
         .type = PERIPH_ID_ADC_BTN,                      \
-        .user_id = INPUT_KEY_USER_ID_REC,               \
-        .act_id = BUTTON_REC_ID,                        \
+        .user_id = INPUT_KEY_USER_ID_VOLUP,             \
+        .act_id = BUTTON_VOLUP_ID,                      \
     },                                                  \
     {                                                   \
         .type = PERIPH_ID_ADC_BTN,                      \
-        .user_id = INPUT_KEY_USER_ID_MUTE,              \
-        .act_id = BUTTON_MODE_ID,                       \
+        .user_id = INPUT_KEY_USER_ID_VOLDOWN,           \
+        .act_id = BUTTON_VOLDOWN_ID,                    \
     },                                                  \
     {                                                   \
         .type = PERIPH_ID_ADC_BTN,                      \
@@ -148,14 +149,17 @@ extern audio_hal_func_t AUDIO_CODEC_ES7210_DEFAULT_HANDLE;
     },                                                  \
     {                                                   \
         .type = PERIPH_ID_ADC_BTN,                      \
-        .user_id = INPUT_KEY_USER_ID_VOLUP,             \
-        .act_id = BUTTON_VOLUP_ID,                      \
+        .user_id = INPUT_KEY_USER_ID_MUTE,              \
+        .act_id = BUTTON_MODE_ID,                       \
     },                                                  \
     {                                                   \
         .type = PERIPH_ID_ADC_BTN,                      \
-        .user_id = INPUT_KEY_USER_ID_VOLDOWN,           \
-        .act_id = BUTTON_VOLDOWN_ID,                    \
+        .user_id = INPUT_KEY_USER_ID_REC,               \
+        .act_id = BUTTON_REC_ID,                        \
     }                                                   \
+    
+    
+    
 }
 
 #endif
