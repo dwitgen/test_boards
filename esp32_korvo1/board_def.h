@@ -118,7 +118,7 @@ extern audio_hal_func_t AUDIO_CODEC_ES7210_DEFAULT_HANDLE;
  */
 #define FUNC_BUTTON_EN              (1)
 #define INPUT_KEY_NUM               6
-#define BUTTON_VOLUP_ID             0
+#define BUTTON_VOLUP_ID             6
 #define BUTTON_VOLDOWN_ID           1
 #define BUTTON_SET_ID               2
 #define BUTTON_PLAY_ID              3
@@ -126,11 +126,6 @@ extern audio_hal_func_t AUDIO_CODEC_ES7210_DEFAULT_HANDLE;
 #define BUTTON_REC_ID               5
 
 #define INPUT_KEY_DEFAULT_INFO() {                      \
-     {                                                  \
-        .type = PERIPH_ID_ADC_BTN,                      \
-        .user_id = INPUT_KEY_NUM,                       \
-        .act_id = 0,                                    \
-     },                                                 \
      {                                                  \
         .type = PERIPH_ID_ADC_BTN,                      \
         .user_id = INPUT_KEY_USER_ID_REC,               \
