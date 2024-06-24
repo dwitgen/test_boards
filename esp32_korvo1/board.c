@@ -125,7 +125,7 @@ esp_err_t audio_board_deinit(audio_board_handle_t audio_board)
 }
 
 // Function to configure I2S stream writer for HTTP
-esp_err_t configure_i2s_stream_writer_http(audio_element_handle_t *i2s_stream_writer) {
+/*esp_err_t configure_i2s_stream_writer_http(audio_element_handle_t *i2s_stream_writer) {
     i2s_driver_config_t i2s_config = {
         .mode = (i2s_mode_t) (I2S_MODE_MASTER | I2S_MODE_TX),
         .sample_rate = 44100,
@@ -245,4 +245,4 @@ esp_err_t configure_resample_filter(audio_element_handle_t *filter) {
 
     ESP_LOGI(TAG, "Resample filter initialized");
     return ESP_OK;
-}
+}*/
