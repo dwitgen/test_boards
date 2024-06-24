@@ -213,7 +213,7 @@ esp_err_t configure_i2s_stream_writer_raw(audio_element_handle_t *i2s_stream_wri
     ESP_LOGI(TAG, "I2S stream writer for raw initialized");
     return ESP_OK;
 }
-
+*/
 // Function to configure resample filter
 esp_err_t configure_resample_filter(audio_element_handle_t *filter) {
     rsp_filter_cfg_t rsp_cfg = {
@@ -245,4 +245,4 @@ esp_err_t configure_resample_filter(audio_element_handle_t *filter) {
 
     ESP_LOGI(TAG, "Resample filter initialized");
     return ESP_OK;
-}*/
+}
